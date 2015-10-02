@@ -9,11 +9,11 @@
 $response = array();
  
 // check for required fields
-if (isset($_POST['name']) && isset($_POST[‘phone’]) && isset($_POST[‘email’])) {
+if (isset($_POST['name']) && isset($_POST['phone']) && isset($_POST['email'])) {
  
     $name = $_POST['name'];
-    $phone = $_POST[‘phone’];
-    $email = $_POST[‘email’];
+    $phone = $_POST['phone'];
+    $email = $_POST['email'];
  
     // include db connect class
     require_once __DIR__ . '/db_connect.php';
@@ -28,7 +28,7 @@ if (isset($_POST['name']) && isset($_POST[‘phone’]) && isset($_POST[‘email
     if ($result) {
         // successfully inserted into database
         $response["success"] = 1;
-        $response["message"] = “User record successfully created.";
+        $response["message"] = "User record successfully created.";
  
         // echoing JSON response
         echo json_encode($response);
